@@ -48,12 +48,6 @@ function draw() {
   drawSprites();
 }
 
-function keyPressed() {
-	if (keyCode === UP_ARROW) {
-	   Matter.Body.applyForce(cBall.body,cBall.body.position,{x:38,y:-38});
-	}
-   }
-
 function mouseDragged(){
     Matter.Body.setPosition(cBall.body,{x:mouseX,y:mouseY})
 }
