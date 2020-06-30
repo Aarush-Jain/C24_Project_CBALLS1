@@ -1,9 +1,11 @@
 var cBall,ground,dustbinImg;
 var dustbinSprite;
+var launcher;
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
+const Constraint = Matter.Constraint;
 
 function preload()
 {
@@ -24,6 +26,8 @@ function setup() {
 	dSideLeft = new Dustbin(675,595,70,PI);
 	dSideBottom = new Dustbin(637.5,630,90,PI/2);
 
+	launcher = new Launcher(cBall.body,{x:100,y:350})
+
 	dustbinSprite = createSprite(637.5,575,125,70)
 	dustbinSprite.addImage(dustbinImg);
 	dustbinSprite.scale = 0.4
@@ -34,12 +38,13 @@ function setup() {
 
 
 function draw() {
-  background(0);
+  background(255);
   ground.display();
   dSideRight.display();
   dSideLeft.display();
   dSideBottom.display();
   cBall.display();
+  launcher.display();
   drawSprites();
 }
 
@@ -48,3 +53,11 @@ function keyPressed() {
 	   Matter.Body.applyForce(cBall.body,cBall.body.position,{x:38,y:-38});
 	}
    }
+
+function mouseDragged(){
+    Matter.Body.setPosition(cBall.body,{x:mouseX,y:mouseY})
+}
+
+function mouseReleased(){
+    launcher.fly();
+}
