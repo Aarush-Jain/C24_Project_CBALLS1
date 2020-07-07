@@ -26,7 +26,7 @@ function setup() {
 	dSideLeft = new Dustbin(675,595,70,PI);
 	dSideBottom = new Dustbin(637.5,630,90,PI/2);
 
-	launcher = new Launcher(cBall.body,{x:100,y:350})
+	launcher = new Launcher(cBall.body,{x:100,y:450})
 
 	dustbinSprite = createSprite(637.5,575,125,70)
 	dustbinSprite.addImage(dustbinImg);
