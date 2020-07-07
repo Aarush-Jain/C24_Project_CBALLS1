@@ -22,13 +22,13 @@ function setup() {
 
 	ground = new Ground(400,650,800,20);
 
-	dSideRight = new Dustbin(597,595,70,PI);
-	dSideLeft = new Dustbin(675,595,70,PI);
-	dSideBottom = new Dustbin(637.5,630,90,PI/2);
+	dSideRight = new Dustbin(610,595,70,PI);
+	dSideLeft = new Dustbin(690,595,70,PI);
+	dSideBottom = new Dustbin(650.5,630,90,PI/2);
 
 	launcher = new Launcher(cBall.body,{x:100,y:450})
 
-	dustbinSprite = createSprite(637.5,575,125,70)
+	dustbinSprite = createSprite(650.5,575,125,70)
 	dustbinSprite.addImage(dustbinImg);
 	dustbinSprite.scale = 0.4
  	

@@ -5,7 +5,7 @@ class Dustbin{
             restitution:0,
             friction:1.0
         };
-        this.body=Bodies.rectangle(x,y,15,height,options);
+        this.body=Bodies.rectangle(x,y,20,height,options);
         this.width=20;
         this.height=height;
         Matter.Body.setAngle(this.body,angle);
