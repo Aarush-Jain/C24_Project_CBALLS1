@@ -13,22 +13,22 @@ function preload()
 }
 
 function setup() {
-	createCanvas(800, 700);
+	createCanvas(1200, 800);
 
 	engine = Engine.create();
 	world = engine.world;
 
-	cBall = new Paper(100,450,14);	
+	cBall = new Paper(300,300,14);	
 
-	ground = new Ground(400,650,800,20);
+	ground = new Ground(600,650,1200,20);
 
-	dSideRight = new Dustbin(610,595,70,PI);
-	dSideLeft = new Dustbin(690,595,70,PI);
-	dSideBottom = new Dustbin(650.5,630,90,PI/2);
+	dSideLeft = new Dustbin(830,595,90,PI);
+	dSideRight = new Dustbin(910,595,90,PI);
+	dSideBottom = new Dustbin(870.5,630,90,PI/2);
 
-	launcher = new Launcher(cBall.body,{x:100,y:450})
+	launcher = new Launcher(cBall.body,{x:300,y:300})
 
-	dustbinSprite = createSprite(650.5,575,125,70)
+	dustbinSprite = createSprite(870.5,575,125,70)
 	dustbinSprite.addImage(dustbinImg);
 	dustbinSprite.scale = 0.4
  	
